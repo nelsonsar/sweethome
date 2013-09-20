@@ -1,0 +1,7 @@
+[color]
+	ui = true
+[user]
+	name = Nelson Senna
+	email = onelsonsenna@gmail.com
+[core]
+	editor = vim
