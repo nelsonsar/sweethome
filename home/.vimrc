@@ -7,6 +7,11 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+set nocompatible
+syntax on
+colorscheme earendel
+set background=light
+
 " change tabs for 4 spaces
 set tabstop=4
 set shiftwidth=4
