@@ -1,5 +1,4 @@
 "mark trailing whitespaces
-
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -9,6 +8,10 @@ autocmd BufWinLeave * call clearmatches()
 
 set nocompatible
 syntax on
+filetype off
+filetype indent on
+
+" colorscheme stuff
 colorscheme earendel
 set background=light
 
@@ -16,6 +19,14 @@ set background=light
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" for js editing
+autocmd FileType javascript set sw=2
+autocmd FileType javascript set ts=2
+autocmd FileType javascript set sts=2
+
+" git commit message
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " bye arrow keys
 noremap <Up> <Nop>
