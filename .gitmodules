@@ -1,12 +1,12 @@
 [submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+	path = home/.vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/vim-nerdtree-tabs"]
-	path = .vim/bundle/vim-nerdtree-tabs
+	path = home/.vim/bundle/vim-nerdtree-tabs
 	url = git://github.com/jistr/vim-nerdtree-tabs.git
 [submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
+	path = home/.vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
 [submodule ".vim/bundle/phpcomplete.vim"]
-	path = .vim/bundle/phpcomplete.vim
+	path = home/.vim/bundle/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
