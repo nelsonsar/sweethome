@@ -4,9 +4,9 @@
 [submodule "home/.vim/bundle/vim-nerdtree-tabs"]
 	path = home/.vim/bundle/vim-nerdtree-tabs
 	url = git://github.com/jistr/vim-nerdtree-tabs.git
-[submodule "home/.vim/bundle/syntastic"]
-	path = home/.vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "home/.vim/bundle/phpcomplete.vim"]
 	path = home/.vim/bundle/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
+[submodule "home/.vim/bundle/syntastic"]
+	path = home/.vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
