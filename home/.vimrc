@@ -12,7 +12,6 @@ filetype off
 filetype indent on
 
 " colorscheme stuff
-colorscheme earendel
 set background=light
 
 " change tabs for 4 spaces
