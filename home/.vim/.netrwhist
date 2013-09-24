@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/nelson/workspace/telexfree/tests/src/TelexFREE/BackOffice/User/Authentication/Rule'
-let g:netrw_dirhist_2='/home/nelson/workspace/dev/manifests'
-let g:netrw_dirhist_3='/etc/apache2/conf.d'
