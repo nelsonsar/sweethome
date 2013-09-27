@@ -11,8 +11,12 @@ syntax on
 filetype off
 filetype indent on
 
+" pathogen
+execute pathogen#infect()
+
 " colorscheme stuff
 set background=light
+colorscheme solarized
 
 " change tabs for 4 spaces
 set tabstop=4
@@ -52,11 +56,9 @@ set number
 " NERDTreeTabs Toggle
 map <C-n> :NERDTreeTabsToggle<CR>
 
-" pathogen
-execute pathogen#infect()
 
 " ctags update
-autocmd VimEnter *.php call UpdateCTags()
+" autocmd VimEnter *.php call UpdateCTags()
 
 function! UpdateCTags()
     let message = system("bash /home/nelson/update_ctags.sh")
