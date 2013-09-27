@@ -11,6 +11,9 @@ syntax on
 filetype off
 filetype indent on
 
+" search stuff
+set hlsearch
+
 " pathogen
 execute pathogen#infect()
 
