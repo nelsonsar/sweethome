@@ -55,6 +55,7 @@ inoremap <Nul> <C-x><C-o>
 
 " line number
 set number
+set ruler
 
 " NERDTreeTabs Toggle
 map <C-n> :NERDTreeTabsToggle<CR>
