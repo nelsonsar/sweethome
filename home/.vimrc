@@ -45,7 +45,7 @@ imap <S-Tab> <Esc><<i
 nmap <S-Tab> <<
 
 " tags
-set tags=/home/nelson/tags.telexfree
+set tags=/home/nelson/vim.tags
 
 "php autocomplete
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
