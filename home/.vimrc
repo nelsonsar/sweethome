@@ -57,27 +57,3 @@ set ruler
 
 " NERDTreeTabs Toggle
 map <C-n> :NERDTreeTabsToggle<CR>
-
-
-" ctags update
-" autocmd VimEnter *.php call UpdateCTags()
-
-function! UpdateCTags()
-    let message = system("bash /home/nelson/update_ctags.sh")
-    redraw!
-    call GetOutputBuffer("__CTAGS__")
-    call append(0, split(message, '\v\n'))
-endfun
-
-function! GetOutputBuffer(bufferName)
-    let foo = a:bufferName
-    let winnr = bufwinnr('^'.foo.'$')
-    if (winnr >= 0)
-        execute winnr . 'wincmd w'
-        execute 'normal! ggdG'
-    else
-        execute '4split '.foo
-        execute 'normal! ggdG'
-        setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
-    endif
-endfun
