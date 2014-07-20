@@ -1,10 +1,11 @@
 set nocompatible
+" delete everything
 set backspace=2
 syntax on
 filetype off
 filetype indent on
 
-" search stuff
+" search highlighting
 set hlsearch
 
 " pathogen
