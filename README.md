@@ -27,3 +27,4 @@ Modules installed:
  - [Solarized](https://github.com/altercation/vim-colors-solarized)
  - [Vim Markdown](https://github.com/tpope/vim-markdown)
  - [Puppet Syntax](https://github.com/puppetlabs/puppet-syntax-vim)
+ - [Tabline](https://github.com/mkitt/tabline.vim)
