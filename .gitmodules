@@ -19,3 +19,6 @@
 [submodule "home/.vim/bundle/puppet-syntax-vim"]
 	path = home/.vim/bundle/puppet-syntax-vim
 	url = git://github.com/puppetlabs/puppet-syntax-vim.git
+[submodule "home/.vim/bundle/tabline.vim"]
+	path = home/.vim/bundle/tabline.vim
+	url = git://github.com/puppetlabs/tabline.vim.git
