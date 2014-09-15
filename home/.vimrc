@@ -26,7 +26,14 @@ autocmd BufWinLeave * call clearmatches()
 " change tabs for 4 spaces
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
+
+" for ruby editing
+autocmd FileType ruby set tabstop=2
+autocmd FileType ruby set shiftwidth=2
+autocmd FileType ruby set softtabstop=2
+
 
 " for js editing
 autocmd FileType javascript set sw=2
