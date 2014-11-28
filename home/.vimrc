@@ -65,3 +65,16 @@ set ruler
 
 " NERDTreeTabs Toggle
 map <C-n> :NERDTreeTabsToggle<CR>
+
+function GoToTest(...)
+    let filename = expand('%:t:r')
+    let test_filename = filename."Test.php"
+    if a:0 > 0
+        execute "tabf **/".a:1."/".test_filename
+    else
+        execute "tabf **/".test_filename
+    endif
+endfunction
+
+inoremap jk <Esc>
+nnoremap <Leader>s :nohlsearch<CR>
