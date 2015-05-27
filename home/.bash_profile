@@ -1,8 +1,10 @@
-alias vim="/usr/local/Cellar/vim/7.4.161/bin/vim"
-alias vi="/usr/local/Cellar/vim/7.4.161/bin/vim"
-
-if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash ]; then
+  . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 fi
 
-source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+if [ -f /Library//Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ]; then
+    source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+fi
+
+complete -W "$(echo `cat ~/.ssh/config | cut -f 2 -d ' ' | \
+    sed -e s/,.*//g | uniq | grep -v "\["`;)" ssh

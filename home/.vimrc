@@ -12,7 +12,7 @@ set hlsearch
 execute pathogen#infect()
 
 " colorscheme stuff
-set background=light
+set background=dark
 colorscheme solarized
 
 "mark trailing whitespaces
@@ -76,5 +76,4 @@ function GoToTest(...)
     endif
 endfunction
 
-inoremap jk <Esc>
 nnoremap <Leader>s :nohlsearch<CR>
