@@ -12,8 +12,8 @@ set hlsearch
 execute pathogen#infect()
 
 " colorscheme stuff
-set background=dark
-colorscheme solarized
+set background=light
+colorscheme PaperColor
 
 "mark trailing whitespaces
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -43,6 +43,9 @@ autocmd FileType javascript set sts=2
 " git commit message
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+" Makefile editing
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
 " bye arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -63,17 +66,41 @@ inoremap <Nul> <C-x><C-o>
 set number
 set ruler
 
-" NERDTreeTabs Toggle
-map <C-n> :NERDTreeTabsToggle<CR>
+" netrw config
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+map <C-n> :call ToggleNetRWListing()<CR>
 
-function GoToTest(...)
-    let filename = expand('%:t:r')
-    let test_filename = filename."Test.php"
-    if a:0 > 0
-        execute "tabf **/".a:1."/".test_filename
-    else
-        execute "tabf **/".test_filename
-    endif
+" Python stuff
+let python_highlight_all = 1
+
+function! ToggleNetRWListing()
+  let current_file = expand('%')
+  let is_netrw = !empty(matchstr(current_file, 'NetrwTreeListing'))
+
+  if is_netrw
+    exec ":windo if !empty(matchstr(expand('%s'), 'NetrwTreeListing')) | exec ':q!' | endif"
+  else
+    exec ':Vexplore'
+  endif
 endfunction
 
 nnoremap <Leader>s :nohlsearch<CR>
+nnoremap <Leader>c :set paste!<CR>
+nnoremap <Leader>p :b #<CR>
+
+function! AfterSave()
+  " Clear the last searched term
+  exec ':let @/ = ""'
+  " Disable paste mode
+  exec ":set nopaste"
+endfunction
+
+augroup Clearing
+  autocmd!
+  autocmd BufWritePre * :call AfterSave()
+augroup END
+

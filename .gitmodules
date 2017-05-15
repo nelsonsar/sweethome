@@ -1,9 +1,3 @@
-[submodule "home/.vim/bundle/nerdtree"]
-	path = home/.vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-[submodule "home/.vim/bundle/vim-nerdtree-tabs"]
-	path = home/.vim/bundle/vim-nerdtree-tabs
-	url = git://github.com/jistr/vim-nerdtree-tabs.git
 [submodule "home/.vim/bundle/phpcomplete.vim"]
 	path = home/.vim/bundle/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
@@ -22,3 +16,9 @@
 [submodule "home/.vim/bundle/vim-csharp"]
 	path = home/.vim/bundle/vim-csharp
 	url = git://github.com/OrangeT/vim-csharp.git
+[submodule "home/.vim/bundle/vim-slim"]
+	path = home/.vim/bundle/vim-slim
+	url = git://github.com/slim-template/vim-slim.git
+[submodule "home/.vim/bundle/papercolor-theme"]
+	path = home/.vim/bundle/papercolor-theme
+	url = git://github.com/NLKNguyen/papercolor-theme.git
